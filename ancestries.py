@@ -7,7 +7,7 @@ from dateutil.parser import parse
 
 class AncestryDescription:
     def __init__(self, full_page, name):
-        self.general =                              helpers.trim_html(full_page, '</i></a><br/>', helpers.hxtitle('You Might...', '2'))
+        self.general =                              helpers.trim_html(full_page, '</sup><br/>', helpers.hxtitle('You Might...', '2'))
         self.you_might = helpers.ul_to_list(        helpers.section_by_title(full_page, 'You Might...'))
         self.others_probably = helpers.ul_to_list(  helpers.section_by_title(full_page, 'Others Probably...'))
         self.physical_description =                 helpers.section_by_title(full_page, 'Physical Description')
